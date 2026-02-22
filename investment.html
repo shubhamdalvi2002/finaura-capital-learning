@@ -22,14 +22,12 @@
       background: #f5f7fa;
     }
 
-    /* HERO */
     .hero {
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: #fff;
       padding: 80px 15px;
     }
 
-    /* CARD */
     .investment-card {
       border: none;
       border-radius: 18px;
@@ -61,7 +59,6 @@
       box-shadow: 0 25px 45px rgba(0,0,0,0.15);
     }
 
-    /* SCROLL ANIMATION */
     .reveal {
       opacity: 0;
       transform: translateY(40px);
@@ -73,7 +70,6 @@
       transform: translateY(0);
     }
 
-    /* CTA */
     .cta {
       background: #0f2027;
       color: #fff;
@@ -105,10 +101,10 @@
   <div class="container">
     <h1 class="mb-3">Our Investment Planning Solutions</h1>
     <p class="mb-4">Smart, disciplined and long-term focused investing</p>
-    <a href="https://your-open-account-link.com" class="btn btn-success btn-lg me-2">
+    <a href="http://p.njw.bz/103924" target="_blank" rel="noopener" class="btn btn-success btn-lg me-2">
       Open Investment Account
     </a>
-    <a href="https://wa.me/9423669236" class="btn btn-outline-light btn-lg">
+    <a href="https://wa.me/9423669236" target="_blank" class="btn btn-outline-light btn-lg">
       Talk to Advisor
     </a>
   </div>
@@ -180,7 +176,7 @@
   <div class="container">
     <h2 class="mb-3">Ready to Start Your Investment Journey?</h2>
     <p class="mb-4">Open your account in just 5–10 minutes</p>
-    <a href="https://your-open-account-link.com" class="btn btn-success btn-lg pulse-btn">
+    <a href="http://p.njw.bz/103924" target="_blank" rel="noopener" class="btn btn-success btn-lg pulse-btn">
       Open Account Now
     </a>
   </div>
@@ -191,104 +187,10 @@
   © 2026 FinAura Capital | Education & Investment Guidance
 </footer>
 
-<!-- MODAL -->
-<div class="modal fade" id="investmentModal" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalTitle"></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body" id="modalBody"></div>
-      <div class="modal-footer">
-        <a href="https://your-open-account-link.com" class="btn btn-success">Open Account</a>
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- JS -->
 <script>
-  function openInvestment(type) {
-    let title = "";
-    let body = "";
-
-    const data = {
-      mf: {
-        title: "📊 Mutual Fund Investment",
-        body: `
-          <p>Mutual Funds pool money from investors to invest in diversified assets.</p>
-          <ul>
-            <li>✔ SIP from ₹500</li>
-            <li>✔ Professionally managed</li>
-            <li>✔ Diversification reduces risk</li>
-            <li>✔ Index, Equity, ELSS options</li>
-          </ul>
-          <p><strong>Ideal for:</strong> Beginners, salaried, students, long-term investors.</p>
-        `
-      },
-      stocks: {
-        title: "📈 Stock Market Investing",
-        body: `
-          <p>Equity investing allows you to own shares of strong companies.</p>
-          <ul>
-            <li>✔ Long-term wealth creation</li>
-            <li>✔ Portfolio-based investing</li>
-            <li>✔ Focus on fundamentals</li>
-            <li>❌ No intraday or tips</li>
-          </ul>
-        `
-      },
-      demat: {
-        title: "🏦 Demat & Trading Account",
-        body: `
-          <p>A Demat account is required to invest in stocks & mutual funds.</p>
-          <ul>
-            <li>✔ Free & paperless opening</li>
-            <li>✔ Easy KYC</li>
-            <li>✔ Secure & SEBI regulated</li>
-          </ul>
-        `
-      },
-      goals: {
-        title: "🎯 Goal-Based Investment Planning",
-        body: `
-          <p>Link your investments to life goals for better discipline.</p>
-          <ul>
-            <li>✔ Child education</li>
-            <li>✔ Marriage planning</li>
-            <li>✔ Retirement planning</li>
-            <li>✔ Emergency fund</li>
-          </ul>
-        `
-      },
-      tax: {
-        title: "🛡️ Tax Saving Investments",
-        body: `
-          <p>Reduce tax while building long-term wealth.</p>
-          <ul>
-            <li>✔ ELSS Mutual Funds</li>
-            <li>✔ Tax benefit under 80C</li>
-            <li>✔ 3-year lock-in</li>
-          </ul>
-        `
-      }
-    };
-
-    title = data[type].title;
-    body = data[type].body;
-
-    document.getElementById("modalTitle").innerHTML = title;
-    document.getElementById("modalBody").innerHTML = body;
-
-    new bootstrap.Modal(document.getElementById("investmentModal")).show();
-  }
-
-  // Scroll animation
   const reveals = document.querySelectorAll(".reveal");
   const revealOnScroll = () => {
     reveals.forEach(el => {
